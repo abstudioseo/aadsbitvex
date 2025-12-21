@@ -1,237 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://adsbitvex.com/assets/ads/ad.js" class="adScriptClass"></script>
-    <script src="https://script.viserlab.com/adsrock/assets/ads/ad.js" class="adScriptClass"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <style>
-        /* CSS: Styles the game to make it look good */
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #2c3e50;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            color: white;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .game--container {
-            display: grid;
-            grid-template-columns: repeat(3, auto);
-            width: 306px;
-            margin: 10px auto;
-            background-color: #34495e;
-            border: 2px solid #ecf0f1;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        .cell {
-            width: 100px;
-            height: 100px;
-            background-color: #34495e;
-            border: 1px solid #7f8c8d;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 4rem;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .cell:hover {
-            background-color: #465f79;
-        }
-
-        /* Colors for X and O */
-        .cell[data-player="X"] {
-            color: #e74c3c; /* Red */
-        }
-        
-        .cell[data-player="O"] {
-            color: #3498db; /* Blue */
-        }
-
-        .game--status {
-            font-size: 1.5rem;
-            margin: 20px 0;
-        }
-
-        .game--restart {
-            background-color: #f1c40f;
-            color: #2c3e50;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: transform 0.1s ease;
-        }
-
-        .game--restart:hover {
-            background-color: #f39c12;
-            transform: scale(1.05);
-        }
-
-        .game--restart:active {
-            transform: scale(0.95);
-        }
-    </style>
+    <title>Ad Example</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class='MainAdverTiseMentDiv' data-publisher="eyJpdiI6IklmOXZhSWVUUHVhelVOWGR4bDl5YkE9PSIsInZhbHVlIjoicGZNUEtxaStBdE5pRFppN0RsSDRDQT09IiwibWFjIjoiOGY0OTM3ZGM0ODI3OGU5NjlmZmIyYTM3NTQ1Yjk5ZWJjNzE0MzAyMjJmN2E2ZmQ4NTMwOTU0MjI0YWQ2NmY1MCIsInRhZyI6IiJ9" data-adsize="320x50"></div> <script class="adScriptClass" src="https://adsbitvex.com/assets/ads/ad.js"></script>
-
-    <h1>Tic Tac Toe</h1>
-    
-    <div class="game--status">It's X's turn</div>
-
-    <div class="game--container">
-        <div data-cell-index="0" class="cell"></div>
-        <div data-cell-index="1" class="cell"></div>
-        <div data-cell-index="2" class="cell"></div>
-        <div data-cell-index="3" class="cell"></div>
-        <div data-cell-index="4" class="cell"></div>
-        <div data-cell-index="5" class="cell"></div>
-        <div data-cell-index="6" class="cell"></div>
-        <div data-cell-index="7" class="cell"></div>
-        <div data-cell-index="8" class="cell"></div>
+    <!-- Main Advertisement Section -->
+    <div class="advertisement-container">
+        <div class="MainAdverTiseMentDiv" 
+             data-publisher="eyJpdiI6ImhpNEp2aXlyRVJoR1BpenppUTlmZkE9PSIsInZhbHVlIjoiOEpNUFZPdy9UQ0RoSEplWnhzK25kdz09IiwibWFjIjoiOGQxMmZhODJkYjJlYTc0MTFkYTQyM2NhZTNiMThmMTNjM2ZlMGIwNGE1Mjc0ZDI5OWJkOTU0OGQ1NmYxOGRiZCIsInRhZyI6IiJ9" 
+             data-adsize="320x50">
+        </div>
+        <script class="adScriptClass" src="https://adsbitvex.com/assets/ads/ad.js"></script>
     </div>
 
-    <div class='MainAdverTiseMentDiv' data-publisher="eyJpdiI6IjR6M2twS1dkeXBjRVpRM24rTHlUTkE9PSIsInZhbHVlIjoiZXlibzA3YURzUU52RnRCdHdTRVpFQT09IiwibWFjIjoiM2UxMDY0MTkxOTNjYzgwOWUzODg5ZDJmZTUzNjY1N2Q2NThhNDViODc5NTBjN2IzNmU5YjFlODBkYzM4MWYxOCIsInRhZyI6IiJ9" data-adsize="320x50"></div>
-
-    <div class='MainAdverTiseMentDiv' data-publisher="eyJpdiI6IlNzTi9nUUZJd3JRd21nUHY4UVRZdmc9PSIsInZhbHVlIjoiT29kSUE2VmZwY0hBbEtCczdKd1NMdz09IiwibWFjIjoiNjFkYTkzNDU0MjQzM2MwYmUyNjY1NzM5MGEzZWZlMmI4MDVmNGJlNjFkY2QyZGE5Y2M0Yzg2MTk0ODZmMDUyMSIsInRhZyI6IiJ9" data-adsize="468x60"></div>
-
-    <div class='MainAdverTiseMentDiv' data-publisher="eyJpdiI6IkFEeis4SXJBNklnZ1BHSEtveTlMZnc9PSIsInZhbHVlIjoiTTlTelJaYkgrY01Hb253MFNDZG9udz09IiwibWFjIjoiMjY5OWQ1OWZiOTg3ZWM4ODU0MWU4MTVmMjRlMTljZTI2YzU2ZmM3N2FlNDg2NjdmNGUyNTM4MzVjZjQ3ODc2MCIsInRhZyI6IiJ9" data-adsize="728x90"></div>
-
-    <div class='MainAdverTiseMentDiv' data-publisher="eyJpdiI6InF4YWhzc0cvbFJKcWNGZjVKMVA2eFE9PSIsInZhbHVlIjoiSGgyVGlSRHlqQU8vSktrU2FMUnJWQT09IiwibWFjIjoiNTBmMzhlMGRlMjI0NWNlYTViYmM2ZDVlMTI5OWNiMTQzNzRlMzE2N2RjOTNlZDExYTcyMDQyMjQ5NjBhMTNiNyIsInRhZyI6IiJ9" data-adsize="250x250"></div>
-
-    <div class='MainAdverTiseMentDiv' data-publisher="eyJpdiI6IkpaTXRxcXkraHhOWWQ3YUVnWmg1cXc9PSIsInZhbHVlIjoiTFdDbHlhNWxnRDlBNHVaUWtZajZDQT09IiwibWFjIjoiMzBkYzM4M2VlMWViNTJkODdmMGM5YzI5MThlNjRkMzdiM2E5NGIyYTg5MTdiNGE3ZmMyYjRiMGY0YjI3MWNlZSIsInRhZyI6IiJ9" data-adsize="120x600"></div>
-
-    <button class="game--restart">Restart Game</button>
-
-    <script>
-        // JavaScript: Handles the game logic
-
-        const statusDisplay = document.querySelector('.game--status');
-        let gameActive = true;
-        let currentPlayer = "X";
-        let gameState = ["", "", "", "", "", "", "", "", ""];
-
-        const winningMessage = () => `Player ${currentPlayer} has won!`;
-        const drawMessage = () => `Game ended in a draw!`;
-        const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
-
-        statusDisplay.innerHTML = currentPlayerTurn();
-
-        // All possible winning combinations (rows, columns, diagonals)
-        const winningConditions = [
-            [0, 1, 2],
-            [3, 4, 5],
-            [6, 7, 8],
-            [0, 3, 6],
-            [1, 4, 7],
-            [2, 5, 8],
-            [0, 4, 8],
-            [2, 4, 6]
-        ];
-
-        function handleCellPlayed(clickedCell, clickedCellIndex) {
-            gameState[clickedCellIndex] = currentPlayer;
-            clickedCell.innerHTML = currentPlayer;
-            // Add attribute for coloring
-            clickedCell.setAttribute('data-player', currentPlayer);
-        }
-
-        function handlePlayerChange() {
-            currentPlayer = currentPlayer === "X" ? "O" : "X";
-            statusDisplay.innerHTML = currentPlayerTurn();
-        }
-
-        function handleResultValidation() {
-            let roundWon = false;
-            
-            // Check through all winning conditions
-            for (let i = 0; i <= 7; i++) {
-                const winCondition = winningConditions[i];
-                let a = gameState[winCondition[0]];
-                let b = gameState[winCondition[1]];
-                let c = gameState[winCondition[2]];
-                
-                if (a === '' || b === '' || c === '') {
-                    continue;
-                }
-                
-                if (a === b && b === c) {
-                    roundWon = true;
-                    break;
-                }
-            }
-
-            if (roundWon) {
-                statusDisplay.innerHTML = winningMessage();
-                gameActive = false;
-                return;
-            }
-
-            // Check for draw (no empty strings left in gameState)
-            let roundDraw = !gameState.includes("");
-            if (roundDraw) {
-                statusDisplay.innerHTML = drawMessage();
-                gameActive = false;
-                return;
-            }
-
-            handlePlayerChange();
-        }
-
-        function handleCellClick(clickedCellEvent) {
-            const clickedCell = clickedCellEvent.target;
-            
-            // Get the index from the data attribute
-            const clickedCellIndex = parseInt(
-                clickedCell.getAttribute('data-cell-index')
-            );
-
-            // Don't do anything if cell is already filled or game is over
-            if (gameState[clickedCellIndex] !== "" || !gameActive) {
-                return;
-            }
-
-            handleCellPlayed(clickedCell, clickedCellIndex);
-            handleResultValidation();
-        }
-
-        function handleRestartGame() {
-            gameActive = true;
-            currentPlayer = "X";
-            gameState = ["", "", "", "", "", "", "", "", ""];
-            statusDisplay.innerHTML = currentPlayerTurn();
-            
-            document.querySelectorAll('.cell').forEach(cell => {
-                cell.innerHTML = "";
-                cell.removeAttribute('data-player');
-            });
-        }
-
-        // Add event listeners
-        document.querySelectorAll('.cell').forEach(cell => 
-            cell.addEventListener('click', handleCellClick)
-        );
-        document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
-    </script>
-    <div class='MainAdverTiseMentDiv' data-publisher="eyJpdiI6IlNzTi9nUUZJd3JRd21nUHY4UVRZdmc9PSIsInZhbHVlIjoiT29kSUE2VmZwY0hBbEtCczdKd1NMdz09IiwibWFjIjoiNjFkYTkzNDU0MjQzM2MwYmUyNjY1NzM5MGEzZWZlMmI4MDVmNGJlNjFkY2QyZGE5Y2M0Yzg2MTk0ODZmMDUyMSIsInRhZyI6IiJ9" data-adsize="468x60"></div>
+    <!-- Sample Content for the Page -->
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>This is a test website with advertisements integrated.</p>
+    </div>
 </body>
 </html>
